@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>Список користувачів</h1>
+    <ul>
+        <% users.forEach(user=> { %>
+            <li>
+                <%= user.name %> - <%= user.email %>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>

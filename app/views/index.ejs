@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+    <nav>
+        <% if (user) { %>
+            <a href="/protected">Захищена</a>
+            <a href="/logout">Вийти</a>
+            <% } else { %>
+                <a href="/signin">Вхід</a>
+                <a href="/signup">Реєстрація</a>
+                <% } %>
+    </nav>
+
+    <h1>Головна сторінка</h1>
+</body>
+
+</html>

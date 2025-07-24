@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Головна</a>
+        <a href="/signup">Реєстрація</a>
+    </nav>
+
+    <h2>Вхід</h2>
+
+    <% if (typeof error !=='undefined' ) { %>
+        <p>
+            <%= error %>
+        </p>
+        <% } %>
+
+            <form action="/signin" method="POST">
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="password" name="password" placeholder="Пароль" required><br>
+                <button>Увійти</button>
+            </form>
+
+            <br>
+            <a href="/auth/google">
+                <button>Увійти через Google</button>
+            </a>
+</body>
+
+</html>
